@@ -1,0 +1,24 @@
+{
+    "name": "getfokus/sentione-api",
+    "type": "library",
+    "description": "PHP SentiOne API for PHP 5.3+",
+    "keywords": ["sentione"],
+    "homepage": "https://github.com/athlan/sentione-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Piotr Pelczar",
+            "email": "me@athlan.pl",
+            "homepage": "http://athlan.pl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "SentioneApi": "."
+        }
+    }
+}
