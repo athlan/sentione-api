@@ -35,10 +35,12 @@ class Client
 	
 	public function apiCall($action, array $params) {
 		if (null === $this->requestStrategy) {
-			$this->setRequestStrategy(new \SentioneApi\Net\RequestStrategy());
+			$this->setRequestStrategy(new \SentioneApi\Net\RequestStrategy\Curl());
 		}
 		
 		$metadata = array(
+			'host' => $this->apiUrl,
+			
 			'authentication_username' => $this->username,
 			'authentication_password' => $this->password,
 			'authentication_strategy' => 'digest',
@@ -54,7 +56,7 @@ class Client
 		
 		switch ($response->getResponseCode()) {
 			case 401:
-				throw new ApiException("Authorization failed", 401);
+				throw new ApiException("Bad credentials", 401);
 			
 			default:
 				throw new ApiException("Unknown error", $response->getResponseCode());
