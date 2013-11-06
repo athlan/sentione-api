@@ -8,6 +8,7 @@ This is a PHP 5.3+ API wrapper for the [SentiOne API](http://sentione.pl/)
 ##Requirements
 * PHP 5.3+
 * [CURL](http://php.net/manual/en/book.curl.php)
+* API credentials. To obtain username and password, please [contact SentiOne developers](http://sentione.pl/kontakt).
 
 ##Installation
 
@@ -20,7 +21,9 @@ Add the following package to `composer.json`:
 ##Basic usage
 
 To call API just use method:
+```
 $response = $sentione->apiCall($action, array $params);
+```
 
 You will receive the `Response` object
 
