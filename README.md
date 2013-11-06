@@ -3,6 +3,9 @@ sentione-api
 
 This is a PHP 5.3+ API wrapper for the [SentiOne API](http://sentione.pl/)
 
+Author: [Piotr 'Athlan' Pelczar](http://athlan.pl)
+Created for project: [Fokus](http://getfokus.com)
+
 ---
 
 ##Requirements
