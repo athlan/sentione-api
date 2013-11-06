@@ -58,7 +58,7 @@ class Curl implements RequestStrategyInterface {
 		$info = curl_getinfo($c);
 		curl_close($c);
 		
-		$code = $info['code'];
+		$code = $info['http_code'];
 		
 		return new Response($code, $body);
 	}
